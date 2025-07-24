@@ -1,0 +1,783 @@
+{
+    "response_code": 0,
+    "results":[
+  {
+    "type": "multiple",
+    
+    "category": "Artificial Intelligence",
+    "question": "What is the derivative of x^2?",
+    "correct_answer": "2x",
+    "incorrect_answers": ["x", "x^2", "2"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "What is the integral of x^2?",
+    "correct_answer": "x^3/3 + C",
+    "incorrect_answers": ["x^2/2 + C", "2x + C", "x^3 + C"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which rule is used to differentiate a product of two functions?",
+    "correct_answer": "Product Rule",
+    "incorrect_answers": ["Chain Rule", "Quotient Rule", "Sum Rule"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "What is the derivative of sin(x)?",
+    "correct_answer": "cos(x)",
+    "incorrect_answers": ["-sin(x)", "tan(x)", "-cos(x)"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "What is the integral of 1/x?",
+    "correct_answer": "ln|x| + C",
+    "incorrect_answers": ["1/x + C", "x^2 + C", "x + C"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "The derivative of a constant is:",
+    "correct_answer": "0",
+    "incorrect_answers": ["1", "The constant itself", "Undefined"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "What is the derivative of e^x?",
+    "correct_answer": "e^x",
+    "incorrect_answers": ["ln(x)", "1/x", "x e^x"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "What is the integral of cos(x)?",
+    "correct_answer": "sin(x) + C",
+    "incorrect_answers": ["-sin(x) + C", "cos(x) + C", "tan(x) + C"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "Which rule is used to differentiate a composition of functions?",
+    "correct_answer": "Chain Rule",
+    "incorrect_answers": ["Product Rule", "Power Rule", "Quotient Rule"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "If f(x) = 3x^3, then f'(x) is:",
+    "correct_answer": "9x^2",
+    "incorrect_answers": ["6x", "x^3", "3x^2"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What is the distance between the points (3, 4) and (7, 1)?",
+    "correct_answer": "5",
+    "incorrect_answers": ["4", "6", "7"]
+  },
+  {
+    "type": "multiple",
+   "category": "Artificial Intelligence",
+   
+    "question": "What is the equation of the line passing through points (2,3) and (4,7)?",
+    "correct_answer": "y = 2x - 1",
+    "incorrect_answers": ["y = x + 1", "y = 3x + 2", "y = 2x + 1"]
+  },
+  {
+    "type": "multiple",
+   
+   "category": "Artificial Intelligence",
+    "question": "Find the center of the circle given by the equation x² + y² - 4x + 6y - 12 = 0",
+    "correct_answer": "(2, -3)",
+    "incorrect_answers": ["(4, -3)", "(-2, 3)", "(2, 3)"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What is the condition for two lines to be perpendicular in a plane?",
+    "correct_answer": "Product of their slopes is -1",
+    "incorrect_answers": ["Sum of slopes is 1", "Both slopes are equal", "One slope is zero"]
+  },
+  {
+    "type": "multiple",
+   
+   "category": "Artificial Intelligence",
+    "question": "What is the standard form of the equation of a circle with center at (h,k) and radius r?",
+    "correct_answer": "(x - h)² + (y - k)² = r²",
+    "incorrect_answers": [
+      "(x + h)² + (y + k)² = r²",
+      "x² + y² = r²",
+      "(x - r)² + (y - r)² = h² + k²"
+    ]
+  },
+   {
+    "type": "multiple",
+
+"category": "Artificial Intelligence",
+    "question": "What is the probability of getting a sum of 7 when two dice are rolled?",
+    "correct_answer": "6/36",
+    "incorrect_answers": ["5/36", "1/6", "1/12"]
+  },
+  {
+    "type": "multiple",
+
+"category": "Artificial Intelligence",
+    "question": "If a fair coin is tossed 3 times, what is the probability of getting exactly two heads?",
+    "correct_answer": "3/8",
+    "incorrect_answers": ["1/4", "1/2", "5/8"]
+  },
+  {
+    "type": "multiple",
+   
+"category": "Artificial Intelligence",
+    "question": "In a normal distribution, approximately what percentage of data falls within one standard deviation from the mean?",
+    "correct_answer": "68%",
+    "incorrect_answers": ["75%", "95%", "99%"]
+  },
+  {
+    "type": "multiple",
+
+"category": "Artificial Intelligence",
+    "question": "What is the mean of the data set: 4, 8, 6, 5, 3?",
+    "correct_answer": "5.2",
+    "incorrect_answers": ["5", "4.5", "6"]
+  },
+  {
+    "type": "multiple",
+   
+"category": "Artificial Intelligence",
+    "question": "If the variance of a data set is 9, what is its standard deviation?",
+    "correct_answer": "3",
+    "incorrect_answers": ["81", "4.5", "6"]
+  },
+   {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "What is the binary equivalent of decimal number 13?",
+    "correct_answer": "1101",
+    "incorrect_answers": ["1011", "1110", "1001"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What is the decimal equivalent of the binary number 1010?",
+    "correct_answer": "10",
+    "incorrect_answers": ["8", "12", "15"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What is the hexadecimal equivalent of the binary number 1111?",
+    "correct_answer": "F",
+    "incorrect_answers": ["E", "B", "C"]
+  },
+  {
+    "type": "multiple",
+   
+   "category": "Artificial Intelligence",
+    "question": "What is the result of adding binary numbers 1101 and 1011?",
+    "correct_answer": "11000",
+    "incorrect_answers": ["10100", "10010", "11110"]
+  },
+  {
+    "type": "multiple",
+   
+   "category": "Artificial Intelligence",
+    "question": "Which of the following is not a valid hexadecimal digit?",
+    "correct_answer": "G",
+    "incorrect_answers": ["9", "B", "F"]
+  },
+   {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "Which logic gate gives a HIGH (1) output only when both inputs are HIGH?",
+    "correct_answer": "AND gate",
+    "incorrect_answers": ["OR gate", "XOR gate", "NAND gate"]
+  },
+  {
+    "type": "multiple",
+ 
+    "category": "Artificial Intelligence",
+    "question": "The output of a NOT gate is HIGH when the input is:",
+    "correct_answer": "LOW",
+    "incorrect_answers": ["HIGH", "Undefined", "Same as input"]
+  },
+  {
+    "type": "multiple",
+   
+    "category": "Artificial Intelligence",
+    "question": "Which gate is known as a universal gate?",
+    "correct_answer": "NAND",
+    "incorrect_answers": ["AND", "XOR", "OR"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "What is the output of an XOR gate when both inputs are the same?",
+    "correct_answer": "0",
+    "incorrect_answers": ["1", "Same as input", "Undefined"]
+  },
+  {
+    "type": "multiple",
+   
+    "category": "Artificial Intelligence",
+    "question": "Which Boolean expression represents an OR gate?",
+    "correct_answer": "A + B",
+    "incorrect_answers": ["A . B", "A ⊕ B", "¬A"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "Which of the following is the correct way to declare an array in C?",
+    "correct_answer": "int arr[5];",
+    "incorrect_answers": ["array int arr[5];", "int arr();", "int[5] arr;"]
+  },
+  {
+    "type": "multiple",
+"category": "Artificial Intelligence",
+    
+    "question": "Which keyword is used to define a class in Java?",
+    "correct_answer": "class",
+    "incorrect_answers": ["struct", "define", "object"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "What is the size of an int variable in C (on a 32-bit system)?",
+    "correct_answer": "4 bytes",
+    "incorrect_answers": ["2 bytes", "8 bytes", "1 byte"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "Which method is the entry point in a Java application?",
+    "correct_answer": "public static void main(String[] args)",
+    "incorrect_answers": ["start()", "init()", "Main()"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "What is the correct syntax for a 'for' loop in C?",
+    "correct_answer": "for(int i = 0; i < 10; i++)",
+    "incorrect_answers": ["for i = 0 to 10", "loop(i < 10)", "foreach i in 10"]
+  },
+  {
+    "type": "multiple",
+   
+    "category": "Artificial Intelligence",
+    "question": "Which of these data types is NOT primitive in Java?",
+    "correct_answer": "String",
+    "incorrect_answers": ["int", "boolean", "char"]
+  },
+  {
+    "type": "multiple",
+   
+    "category": "Artificial Intelligence",
+    "question": "In C, what will be the result of: printf(\"%d\", 5/2);",
+    "correct_answer": "2",
+    "incorrect_answers": ["2.5", "3", "0"]
+  },
+  {
+    "type": "multiple",
+
+    "category": "Artificial Intelligence",
+    "question": "Which of the following is used to handle exceptions in Java?",
+    "correct_answer": "try-catch",
+    "incorrect_answers": ["throw-catch", "try-final", "error-check"]
+  },
+  {
+    "type": "multiple",
+   
+    "category": "Artificial Intelligence",
+    "question": "Which of the following will declare a pointer to an integer in C?",
+    "correct_answer": "int *ptr;",
+    "incorrect_answers": ["int ptr;", "*int ptr;", "ptr int;"]
+  },
+  {
+    "type": "multiple",
+"category": "Artificial Intelligence",
+    
+    "question": "Which loop guarantees at least one execution of its body in both C and Java?",
+    "correct_answer": "do-while",
+    "incorrect_answers": ["for", "while", "foreach"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "Which of the following is an example of system software?",
+    "correct_answer": "Operating System",
+    "incorrect_answers": ["Word Processor", "Web Browser", "Spreadsheet"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What type of software is MS Word?",
+    "correct_answer": "Application Software",
+    "incorrect_answers": ["System Software", "Utility Software", "Compiler"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "Which software converts high-level language to machine code?",
+    "correct_answer": "Compiler",
+    "incorrect_answers": ["Operating System", "Text Editor", "Interpreter"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which software is responsible for managing hardware resources?",
+    "correct_answer": "Operating System",
+    "incorrect_answers": ["Browser", "Antivirus", "IDE"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Utility software is used for:",
+    "correct_answer": "Maintaining and optimizing computer performance",
+    "incorrect_answers": [
+      "Creating documents",
+      "Compiling code",
+      "Designing websites"
+    ]
+  },
+  {
+    "type": "multiple",
+ "category": "Artificial Intelligence",
+   
+    "question": "What does CPU stand for?",
+    "correct_answer": "Central Processing Unit",
+    "incorrect_answers": ["Computer Processing Unit", "Central Program Unit", "Control Program Unit"]
+  },
+  {
+    "type": "multiple",
+ 
+   "category": "Artificial Intelligence",
+    "question": "Which of the following is volatile memory?",
+    "correct_answer": "RAM",
+    "incorrect_answers": ["ROM", "Hard Drive", "SSD"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "Which component is responsible for performing calculations in a computer?",
+    "correct_answer": "ALU",
+    "incorrect_answers": ["RAM", "ROM", "Control Unit"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "What is the main function of an operating system?",
+    "correct_answer": "Manage hardware and software resources",
+    "incorrect_answers": ["Write code", "Compile programs", "Access the internet"]
+  },
+  {
+    "type": "multiple",
+"category": "Artificial Intelligence",
+   
+    "question": "Which one is an input device?",
+    "correct_answer": "Mouse",
+    "incorrect_answers": ["Monitor", "Speaker", "Printer"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "Which type of software helps users perform specific tasks like writing documents?",
+    "correct_answer": "Application Software",
+    "incorrect_answers": ["System Software", "Utility Software", "Compiler"]
+  },
+  {
+    "type": "multiple",
+   
+   "category": "Artificial Intelligence",
+    "question": "Which of the following stores data permanently?",
+    "correct_answer": "Hard Disk Drive",
+    "incorrect_answers": ["RAM", "Cache", "Registers"]
+  },
+  {
+    "type": "multiple",
+   "category": "Artificial Intelligence",
+   
+    "question": "Which memory is the fastest?",
+    "correct_answer": "Cache",
+    "incorrect_answers": ["RAM", "SSD", "ROM"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "Which component controls all operations in the computer system?",
+    "correct_answer": "Control Unit",
+    "incorrect_answers": ["ALU", "Memory", "Power Supply"]
+  },
+  {
+    "type": "multiple",
+
+   "category": "Artificial Intelligence",
+    "question": "Which of the following is not a hardware component?",
+    "correct_answer": "Browser",
+    "incorrect_answers": ["Motherboard", "Keyboard", "RAM"]
+  }, {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which part of the CPU performs arithmetic and logical operations?",
+    "correct_answer": "ALU",
+    "incorrect_answers": ["CU", "RAM", "ROM"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "What does the Control Unit (CU) in a CPU do?",
+    "correct_answer": "Directs operations of the processor",
+    "incorrect_answers": ["Stores data", "Performs arithmetic", "Generates electricity"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which memory is used to store the BIOS?",
+    "correct_answer": "ROM",
+    "incorrect_answers": ["RAM", "Cache", "SSD"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which hardware component temporarily stores data for quick access?",
+    "correct_answer": "RAM",
+    "incorrect_answers": ["Hard Drive", "ROM", "Monitor"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which of the following is considered volatile memory?",
+    "correct_answer": "RAM",
+    "incorrect_answers": ["ROM", "SSD", "CD-ROM"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which component is responsible for executing instructions in a program?",
+    "correct_answer": "CPU",
+    "incorrect_answers": ["Hard Drive", "RAM", "GPU"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which is not a storage device?",
+    "correct_answer": "CPU",
+    "incorrect_answers": ["Hard Drive", "SSD", "Flash Drive"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which device connects all components of the computer together?",
+    "correct_answer": "Motherboard",
+    "incorrect_answers": ["CPU", "RAM", "Monitor"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which component improves CPU performance by storing frequently used data?",
+    "correct_answer": "Cache",
+    "incorrect_answers": ["ROM", "GPU", "SSD"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which unit carries out comparison operations in a CPU?",
+    "correct_answer": "ALU",
+    "incorrect_answers": ["CU", "RAM", "ROM"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "What is the full form of CPU?",
+    "correct_answer": "Central Processing Unit",
+    "incorrect_answers": ["Control Power Unit", "Central Performance Unit", "Central Program Unit"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which of these is an example of input device?",
+    "correct_answer": "Keyboard",
+    "incorrect_answers": ["Monitor", "Speaker", "Printer"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which component is used to display output to the user?",
+    "correct_answer": "Monitor",
+    "incorrect_answers": ["Keyboard", "RAM", "CPU"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which of these is not a type of computer memory?",
+    "correct_answer": "Processor",
+    "incorrect_answers": ["Cache", "ROM", "RAM"]
+  },
+  {
+    "type": "multiple",
+    "category": "Artificial Intelligence",
+    "question": "Which component supplies power to all other parts of the computer?",
+    "correct_answer": "Power Supply Unit (PSU)",
+    "incorrect_answers": ["CPU", "Motherboard", "Hard Disk"]
+  },
+   {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "What is the eccentricity of a hyperbola?",
+    "correct_answer": "Greater than 1",
+    "incorrect_answers": ["0", "1", "Less than 1"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "The slope of the line perpendicular to the line 2x - 3y + 5 = 0 is:",
+    "correct_answer": "3/2",
+    "incorrect_answers": ["2/3", "-3/2", "-2/3"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "The general equation of a circle is:",
+    "correct_answer": "x² + y² + Dx + Ey + F = 0",
+    "incorrect_answers": [
+      "ax + by + c = 0",
+      "ax² + by² + c = 0",
+      "ax² + bxy + cy² = 0"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "The point dividing the line joining (2,3) and (10,7) in 1:3 internally is:",
+    "correct_answer": "(5, 4.5)",
+    "incorrect_answers": ["(4, 4)", "(8, 6)", "(3, 3.5)"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "Which of the following represents a pair of parallel lines?",
+    "correct_answer": "3x + 4y = 7 and 6x + 8y = 10",
+    "incorrect_answers": [
+      "y = 2x + 5 and y = -2x + 1",
+      "y = 3x - 4 and 6x - 2y = 8",
+      "y = x and y = -x"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "The coordinates of the centroid of triangle A(1,2), B(3,4), and C(5,6) is:",
+    "correct_answer": "(3, 4)",
+    "incorrect_answers": ["(2, 4)", "(3, 2)", "(4, 3)"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "The length of the latus rectum of the parabola y² = 4ax is:",
+    "correct_answer": "4a",
+    "incorrect_answers": ["a", "2a", "3a"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "If two lines are perpendicular, the product of their slopes is:",
+    "correct_answer": "-1",
+    "incorrect_answers": ["0", "1", "Undefined"]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "What is the condition for three points to be collinear?",
+    "correct_answer": "Their slopes are equal",
+    "incorrect_answers": [
+      "They lie on the same circle",
+      "They lie on different lines",
+      "Their sum is zero"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "Analytical Geometry",
+    "question": "Which conic section is represented by the equation x² - y² = 1?",
+    "correct_answer": "Hyperbola",
+    "incorrect_answers": ["Circle", "Parabola", "Ellipse"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "In Java, which keyword is used to prevent method overriding?",
+    "correct_answer": "final",
+    "incorrect_answers": ["static", "protected", "abstract"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "Which of the following is true about pointers in C?",
+    "correct_answer": "Pointers store the memory address of a variable.",
+    "incorrect_answers": [
+      "Pointers store the value of variables directly.",
+      "Pointers are not allowed in functions.",
+      "Pointers can only be used with integers."
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "What is the output of the following C code? \n\nint a = 10; printf(\"%d\", a++);",
+    "correct_answer": "10",
+    "incorrect_answers": ["11", "Compilation Error", "Garbage Value"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "Which of these is not a Java primitive data type?",
+    "correct_answer": "String",
+    "incorrect_answers": ["int", "char", "boolean"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "Which feature of OOP allows reusing code across classes?",
+    "correct_answer": "Inheritance",
+    "incorrect_answers": ["Polymorphism", "Abstraction", "Encapsulation"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "What will be the output of this Java code? \n\nSystem.out.println(9 + 3 + \"Java\");",
+    "correct_answer": "12Java",
+    "incorrect_answers": ["Java12", "93Java", "Java93"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "Which of the following can be overloaded in C++ but not in C?",
+    "correct_answer": "Functions and operators",
+    "incorrect_answers": ["Functions", "Variables", "Macros"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "In Java, what does JVM stand for?",
+    "correct_answer": "Java Virtual Machine",
+    "incorrect_answers": [
+      "Java Variable Mode",
+      "Java Verified Module",
+      "Java Visual Manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "In C, what will the sizeof(char) return?",
+    "correct_answer": "1",
+    "incorrect_answers": ["2", "4", "Depends on compiler"]
+  },
+  {
+    "type": "multiple",
+    "category": "Programming (C/Java)",
+    "question": "Which Java collection class maintains insertion order?",
+    "correct_answer": "LinkedHashMap",
+    "incorrect_answers": ["HashMap", "TreeMap", "Hashtable"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "What is the minimum number of NAND gates required to implement an XOR gate?",
+    "correct_answer": "4",
+    "incorrect_answers": ["2", "3", "5"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "Which of the following flip-flops is used to eliminate the race-around condition in JK flip-flop?",
+    "correct_answer": "Master-Slave JK Flip-Flop",
+    "incorrect_answers": ["D Flip-Flop", "T Flip-Flop", "SR Flip-Flop"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "How many select lines are required for a 16-to-1 multiplexer?",
+    "correct_answer": "4",
+    "incorrect_answers": ["2", "3", "5"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "Which of the following logic families is the fastest?",
+    "correct_answer": "Emitter Coupled Logic (ECL)",
+    "incorrect_answers": ["CMOS", "TTL", "RTL"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "In two-level logic circuits, which form is preferred for SOP implementation?",
+    "correct_answer": "AND-OR",
+    "incorrect_answers": ["OR-AND", "NAND-NOR", "XOR-AND"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "Which of the following can be used as a universal gate?",
+    "correct_answer": "NAND and NOR",
+    "incorrect_answers": ["AND and OR", "XOR and XNOR", "NOT and AND"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "How many unique input combinations are there for a 4-variable Boolean function?",
+    "correct_answer": "16",
+    "incorrect_answers": ["8", "32", "24"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "In a synchronous counter using JK flip-flops, what is the advantage over asynchronous counters?",
+    "correct_answer": "No ripple delay",
+    "incorrect_answers": ["Lower cost", "Requires fewer flip-flops", "No need for clock"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "What is the logic expression for the output of a 2-to-4 decoder?",
+    "correct_answer": "Each output = AND of inputs and their complements",
+    "incorrect_answers": ["Each output = OR of inputs", "Each output = XOR of inputs", "Each output = NAND of inputs"]
+  },
+  {
+    "type": "multiple",
+    "category": "Digital Logic",
+    "question": "Which technique is used to minimize logic expressions?",
+    "correct_answer": "Karnaugh Map (K-Map)",
+    "incorrect_answers": ["Truth Table", "Boolean Table", "ASCII Table"]
+  }
+]
+}
