@@ -8,128 +8,35 @@ import {
   Divider,
   Button,
   Message,
+  List,
 } from 'semantic-ui-react';
 
 import mindImg from '../../images/mind.svg';
-
-import {
-  CATEGORIES,
-  NUM_OF_QUESTIONS,
-  DIFFICULTY,
-  QUESTIONS_TYPE,
-  COUNTDOWN_TIME,
-} from '../../constants';
-import { shuffle } from '../../utils';
+import { CATEGORIES } from '../../constants';
+import { prepareQuizQuestions, getAllQuestions } from '../../services/questionService';
+import { TEST_DURATION_SECONDS, TOTAL_QUESTIONS } from '../../constants/quizConfig';
 
 import Offline from '../Offline';
 
-//Shariq Mehdi Add Question
-import question_data from './question.json';
-
 const Main = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
-  const [numOfQuestions, setNumOfQuestions] = useState(5);
-  const [difficulty, setDifficulty] = useState('easy');
-  const [questionsType, setQuestionsType] = useState('0');
-  const [countdownTime, setCountdownTime] = useState({
-    hours: 0,
-    minutes: (60*60),
-    seconds: 0,
-  });
   const [processing, setProcessing] = useState(false);
-  const [error, setError] = useState(null);
-  const [offline, setOffline] = useState(false);
+  const [offline] = useState(false);
 
-  const handleTimeChange = (e, { name, value }) => {
-    setCountdownTime({ ...countdownTime, [name]: value });
-  };
-
-  let allFieldsSelected = false;
-  if (
-    category &&
-    numOfQuestions &&
-    difficulty &&
-    questionsType &&
-    (countdownTime.hours || countdownTime.minutes || countdownTime.seconds)
-  ) {
-    allFieldsSelected = true;
-  }
-
-  const fetchData = () => {
+  const startTest = () => {
     setProcessing(true);
 
-    if (error) setError(null);
-
     setTimeout(() => {
-      const { response_code, results } = question_data;
-      results.forEach(element => {
-        element.options = shuffle([
-          element.correct_answer,
-          ...element.incorrect_answers,
-        ]);
-      });
-
+      const prepared = prepareQuizQuestions(getAllQuestions());
       setProcessing(false);
-      startQuiz(
-        results,
-        countdownTime.hours + countdownTime.minutes + countdownTime.seconds
-      );
-    }, 1000)
-
-    // const API = `https://opentdb.com/api.php?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&type=${questionsType}`;
-
-    // fetch(API)
-    //   .then(respone => respone.json())
-    //   .then(data =>
-    //     setTimeout(() => {
-    //       const { response_code, results } = data;
-
-    //       if (response_code === 1) {
-    //         const message = (
-    //           <p>
-    //             The API doesn't have enough questions for your query. (Ex.
-    //             Asking for 50 Questions in a Category that only has 20.)
-    //             <br />
-    //             <br />
-    //             Please change the <strong>No. of Questions</strong>,{' '}
-    //             <strong>Difficulty Level</strong>, or{' '}
-    //             <strong>Type of Questions</strong>.
-    //           </p>
-    //         );
-
-    //         setProcessing(false);
-    //         setError({ message });
-
-    //         return;
-    //       }
-
-    //       results.forEach(element => {
-    //         element.options = shuffle([
-    //           element.correct_answer,
-    //           ...element.incorrect_answers,
-    //         ]);
-    //       });
-
-    //       setProcessing(false);
-    //       startQuiz(
-    //         results,
-    //         countdownTime.hours + countdownTime.minutes + countdownTime.seconds
-    //       );
-    //     }, 1000)
-    //   )
-    //   .catch(error =>
-    //     setTimeout(() => {
-    //       if (!navigator.onLine) {
-    //         setOffline(true);
-    //       } else {
-    //         setProcessing(false);
-    //         setError(error);
-    //       }
-    //     }, 1000)
-    //   );
+      startQuiz(prepared, TEST_DURATION_SECONDS, category);
+    }, 800);
   };
 
   if (offline) return <Offline />;
+
+  const selectedSubject =
+    CATEGORIES.find(c => c.value === category)?.text || 'Any Category';
 
   return (
     <Container>
@@ -139,62 +46,80 @@ const Main = ({ startQuiz }) => {
             <Item.Image src={mindImg} />
             <Item.Content>
               <Item.Header>
-                <h1>QuizApp for NED master Test</h1>
+                <h1>NED MasterPrep</h1>
+                <p style={{ fontWeight: 400, fontSize: '1rem', color: '#666' }}>
+                  Master&apos;s Admission Test Preparation — CIS Engineering
+                </p>
               </Item.Header>
-              {error && (
-                <Message error onDismiss={() => setError(null)}>
-                  <Message.Header>Error!</Message.Header>
-                  {error.message}
-                </Message>
-              )}
+
+              <Message info size="small">
+                <Message.Content>
+                  Independent preparation platform. Not officially affiliated with or
+                  endorsed by NED University.
+                </Message.Content>
+              </Message>
+
               <Divider />
+
               <Item.Meta>
-                <p>In which category do you want to play the quiz?</p>
+                <p><strong>Select Subject</strong></p>
                 <Dropdown
                   fluid
                   selection
                   name="category"
-                  placeholder="Select Quiz Category"
-                  header="Select Quiz Category"
+                  placeholder="Select Subject"
                   options={CATEGORIES}
                   value={category}
                   onChange={(e, { value }) => setCategory(value)}
                   disabled={processing}
                 />
               </Item.Meta>
+
               <Divider />
+
+              <List bulleted>
+                <List.Item><strong>Questions:</strong> {TOTAL_QUESTIONS}</List.Item>
+                <List.Item><strong>Time:</strong> 60 minutes</List.Item>
+                <List.Item><strong>Mode:</strong> Full practice test</List.Item>
+                <List.Item>
+                  You may <strong>submit early</strong> — completing all questions is not required.
+                </List.Item>
+              </List>
+
+              <Divider />
+
               <Item.Extra>
                 <Button
                   primary
                   size="big"
                   icon="play"
                   labelPosition="left"
-                  content={processing ? 'Processing...' : 'Play Now'}
-                  onClick={fetchData}
-                  disabled={!allFieldsSelected || processing}
+                  content={
+                    processing
+                      ? 'Preparing Test...'
+                      : `Start Test — ${selectedSubject}`
+                  }
+                  onClick={startTest}
+                  disabled={!category || processing}
                 />
               </Item.Extra>
             </Item.Content>
           </Item>
         </Item.Group>
       </Segment>
-      <br />
-      <Segment color="blue">
-  <Item.Content>
-    <Item.Header as="h3" style={{ color: '#0b5ed7' }}>
-      📢 Note for Test Takers
-    </Item.Header>
-    <Item.Description style={{ fontSize: '1.1em', paddingTop: '0.5em' }}>
-      This quiz application is designed specifically to help candidates prepare for the NED University Master's Admission Test in Computer & Information Systems Engineering.  
-      <br />
-      If you notice any mistakes or have suggestions for improvement, please contact:
-      <strong> 0309-2547332 (Junaid)</strong>
-    </Item.Description>
-  </Item.Content>
-</Segment>
 
+      <Segment color="blue">
+        <Item.Content>
+          <Item.Header as="h3" style={{ color: '#0b5ed7' }}>
+            Note for Test Takers
+          </Item.Header>
+          <Item.Description style={{ fontSize: '1.05em', paddingTop: '0.5em' }}>
+            All subjects currently use the same question set. Subject-specific questions
+            will be added later. Report mistakes: <strong>0309-2547332 (Junaid)</strong>
+          </Item.Description>
+        </Item.Content>
+      </Segment>
     </Container>
-  
   );
 };
 

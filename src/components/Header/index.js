@@ -1,37 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, Button } from 'semantic-ui-react';
 
 const Header = () => {
   const [promptEvent, setPromptEvent] = useState(null);
   const [appAccepted, setAppAccepted] = useState(false);
 
-  let isAppInstalled = false;
+  const isAppInstalled =
+    window.matchMedia('(display-mode: standalone)').matches || appAccepted;
 
-  if (window.matchMedia('(display-mode: standalone)').matches || appAccepted) {
-    isAppInstalled = true;
-  }
-
-  window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault();
-    setPromptEvent(e);
-  });
+  useEffect(() => {
+    const handler = e => {
+      e.preventDefault();
+      setPromptEvent(e);
+    };
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
 
   const installApp = () => {
+    if (!promptEvent) return;
     promptEvent.prompt();
     promptEvent.userChoice.then(result => {
       if (result.outcome === 'accepted') {
         setAppAccepted(true);
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
       }
     });
   };
 
   return (
-    <Menu stackable inverted>
+    <Menu stackable inverted color="blue">
       <Menu.Item header>
-        <h1>QuizApp by Junaid</h1>
+        <h2 style={{ margin: 0 }}>NED MasterPrep</h2>
+      </Menu.Item>
+      <Menu.Item>
+        <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
+          Master&apos;s Test Prep · CIS Engineering
+        </span>
       </Menu.Item>
       {promptEvent && !isAppInstalled && (
         <Menu.Item position="right">

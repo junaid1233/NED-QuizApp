@@ -5,59 +5,60 @@ import Loader from '../Loader';
 import Main from '../Main';
 import Quiz from '../Quiz';
 import Result from '../Result';
+import { CATEGORIES } from '../../constants';
 
 import { shuffle } from '../../utils';
+import { withShuffledOptions } from '../../services/questionService';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState(null);
   const [data, setData] = useState(null);
   const [countdownTime, setCountdownTime] = useState(null);
+  const [selectedSubject, setSelectedSubject] = useState('0');
   const [isQuizStarted, setIsQuizStarted] = useState(false);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
   const [resultData, setResultData] = useState(null);
 
-  const startQuiz = (data, countdownTime) => {
+  const startQuiz = (quizData, timerSeconds, subject = '0') => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Loading your quiz...',
+      title: 'Loading your test...',
       message: "It won't be long!",
     });
-    setCountdownTime(countdownTime);
+    setCountdownTime(timerSeconds);
+    setSelectedSubject(subject);
 
     setTimeout(() => {
-      setData(data);
+      setData(quizData);
       setIsQuizStarted(true);
       setLoading(false);
     }, 1000);
   };
 
-  const endQuiz = resultData => {
+  const endQuiz = result => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Fetching your results...',
+      title: 'Calculating your results...',
       message: 'Just a moment!',
     });
 
     setTimeout(() => {
       setIsQuizStarted(false);
       setIsQuizCompleted(true);
-      setResultData(resultData);
+      setResultData(result);
       setLoading(false);
-    }, 2000);
+    }, 1500);
   };
 
   const replayQuiz = () => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Getting ready for round two.',
+      title: 'Preparing another attempt...',
       message: "It won't take long!",
     });
 
-    const shuffledData = shuffle(data);
-    shuffledData.forEach(element => {
-      element.options = shuffle(element.options);
-    });
+    const shuffledData = shuffle(data).map(withShuffledOptions);
 
     setData(shuffledData);
 
@@ -72,8 +73,8 @@ const App = () => {
   const resetQuiz = () => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Loading the home screen.',
-      message: 'Thank you for playing!',
+      title: 'Returning to home...',
+      message: 'Thank you for practicing!',
     });
 
     setTimeout(() => {
@@ -93,7 +94,14 @@ const App = () => {
         <Main startQuiz={startQuiz} />
       )}
       {!loading && isQuizStarted && (
-        <Quiz data={data} countdownTime={countdownTime} endQuiz={endQuiz} />
+        <Quiz
+          data={data}
+          countdownTime={countdownTime}
+          endQuiz={endQuiz}
+          subjectLabel={
+            CATEGORIES.find(c => c.value === selectedSubject)?.text || 'Any Category'
+          }
+        />
       )}
       {!loading && isQuizCompleted && (
         <Result {...resultData} replayQuiz={replayQuiz} resetQuiz={resetQuiz} />

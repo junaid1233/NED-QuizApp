@@ -6,7 +6,6 @@
     "name": "Muhammad Junaid",
     "url": "https://github.com/junaid1233"
   },
-  "homepage": "https://github.com/junaid1233",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

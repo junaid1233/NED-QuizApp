@@ -1,1 +1,9 @@
 node_modules
+build
+
+# Old GitHub Pages artifacts (use build/ after npm run build)
+/static
+/asset-manifest.json
+/service-worker.js
+/service-worker.js.map
+/service-worker.js.LICENSE.txt

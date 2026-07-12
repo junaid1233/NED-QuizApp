@@ -23,7 +23,7 @@ const CATEGORIES = [
     key: 12,
     text: 'CN',
     value: 12,
-  }
+  },
 ];
 
 export default CATEGORIES;
