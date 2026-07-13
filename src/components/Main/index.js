@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-  Segment,
-  Item,
-  Dropdown,
-  Divider,
-  Button,
-  Message,
-  List,
-} from 'semantic-ui-react';
+import { Dropdown } from 'semantic-ui-react';
 
-import mindImg from '../../images/mind.svg';
 import { CATEGORIES } from '../../constants';
 import { prepareQuizQuestions, getAllQuestions } from '../../services/questionService';
 import { TEST_DURATION_SECONDS, TOTAL_QUESTIONS } from '../../constants/quizConfig';
-
+import { BRAND, AUTHOR } from '../../constants/brand';
+import BrandMark from '../BrandMark';
+import SocialLinks from '../SocialLinks';
 import Offline from '../Offline';
 
 const Main = ({ startQuiz }) => {
@@ -39,87 +31,86 @@ const Main = ({ startQuiz }) => {
     CATEGORIES.find(c => c.value === category)?.text || 'Any Category';
 
   return (
-    <Container>
-      <Segment>
-        <Item.Group divided>
-          <Item>
-            <Item.Image src={mindImg} />
-            <Item.Content>
-              <Item.Header>
-                <h1>NED MasterPrep</h1>
-                <p style={{ fontWeight: 400, fontSize: '1rem', color: '#666' }}>
-                  Master&apos;s Admission Test Preparation — CIS Engineering
-                </p>
-              </Item.Header>
+    <div className="start-screen">
+      <section className="start-panel" aria-labelledby="start-heading">
+        <div className="start-panel__intro">
+          <BrandMark variant="hero" />
+          <p className="start-panel__support" id="start-heading">
+            {BRAND.subtitle} — timed practice for the Master&apos;s admission test.
+          </p>
+          <p className="start-panel__disclaimer">{BRAND.disclaimer}</p>
+        </div>
 
-              <Message info size="small">
-                <Message.Content>
-                  Independent preparation platform. Not officially affiliated with or
-                  endorsed by NED University.
-                </Message.Content>
-              </Message>
+        <div className="start-panel__form">
+          <div>
+            <label className="start-panel__label" htmlFor="subject-select">
+              Subject
+            </label>
+            <Dropdown
+              id="subject-select"
+              className="start-panel__dropdown"
+              fluid
+              selection
+              name="category"
+              placeholder="Select Subject"
+              options={CATEGORIES}
+              value={category}
+              onChange={(e, { value }) => setCategory(value)}
+              disabled={processing}
+            />
+          </div>
 
-              <Divider />
+          <div className="start-panel__meta" aria-label="Test details">
+            <div className="start-panel__meta-item">
+              <span className="start-panel__meta-value">{TOTAL_QUESTIONS}</span>
+              <span className="start-panel__meta-label">Questions</span>
+            </div>
+            <div className="start-panel__meta-item">
+              <span className="start-panel__meta-value">60</span>
+              <span className="start-panel__meta-label">Minutes</span>
+            </div>
+            <div className="start-panel__meta-item">
+              <span className="start-panel__meta-value">Full</span>
+              <span className="start-panel__meta-label">Practice</span>
+            </div>
+          </div>
 
-              <Item.Meta>
-                <p><strong>Select Subject</strong></p>
-                <Dropdown
-                  fluid
-                  selection
-                  name="category"
-                  placeholder="Select Subject"
-                  options={CATEGORIES}
-                  value={category}
-                  onChange={(e, { value }) => setCategory(value)}
-                  disabled={processing}
-                />
-              </Item.Meta>
+          <p className="start-panel__hint">
+            You can submit early — finishing every question is optional.
+          </p>
 
-              <Divider />
+          <button
+            type="button"
+            className="start-panel__cta"
+            onClick={startTest}
+            disabled={!category || processing}
+          >
+            {processing ? 'Preparing test…' : `Start Test — ${selectedSubject}`}
+          </button>
+        </div>
 
-              <List bulleted>
-                <List.Item><strong>Questions:</strong> {TOTAL_QUESTIONS}</List.Item>
-                <List.Item><strong>Time:</strong> 60 minutes</List.Item>
-                <List.Item><strong>Mode:</strong> Full practice test</List.Item>
-                <List.Item>
-                  You may <strong>submit early</strong> — completing all questions is not required.
-                </List.Item>
-              </List>
+        <p className="start-panel__note">
+          All subjects currently share the same question set. Report mistakes:{' '}
+          <strong>
+            {AUTHOR.phone} ({AUTHOR.name.split(' ')[0]})
+          </strong>
+        </p>
 
-              <Divider />
-
-              <Item.Extra>
-                <Button
-                  primary
-                  size="big"
-                  icon="play"
-                  labelPosition="left"
-                  content={
-                    processing
-                      ? 'Preparing Test...'
-                      : `Start Test — ${selectedSubject}`
-                  }
-                  onClick={startTest}
-                  disabled={!category || processing}
-                />
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-        </Item.Group>
-      </Segment>
-
-      <Segment color="blue">
-        <Item.Content>
-          <Item.Header as="h3" style={{ color: '#0b5ed7' }}>
-            Note for Test Takers
-          </Item.Header>
-          <Item.Description style={{ fontSize: '1.05em', paddingTop: '0.5em' }}>
-            All subjects currently use the same question set. Subject-specific questions
-            will be added later. Report mistakes: <strong>0309-2547332 (Junaid)</strong>
-          </Item.Description>
-        </Item.Content>
-      </Segment>
-    </Container>
+        <div className="start-panel__creator">
+          <p className="start-panel__creator-text">
+            Product by{' '}
+            <a
+              href="https://junaid-portfolio-mu.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {AUTHOR.name}
+            </a>
+          </p>
+          <SocialLinks />
+        </div>
+      </section>
+    </div>
   );
 };
 

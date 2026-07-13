@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, Button } from 'semantic-ui-react';
+
+import BrandMark from '../BrandMark';
 
 const Header = () => {
   const [promptEvent, setPromptEvent] = useState(null);
@@ -28,27 +29,16 @@ const Header = () => {
   };
 
   return (
-    <Menu stackable inverted color="blue">
-      <Menu.Item header>
-        <h2 style={{ margin: 0 }}>NED MasterPrep</h2>
-      </Menu.Item>
-      <Menu.Item>
-        <span style={{ fontSize: '0.85em', opacity: 0.85 }}>
-          Master&apos;s Test Prep · CIS Engineering
-        </span>
-      </Menu.Item>
-      {promptEvent && !isAppInstalled && (
-        <Menu.Item position="right">
-          <Button
-            color="teal"
-            icon="download"
-            labelPosition="left"
-            content="Install App"
-            onClick={installApp}
-          />
-        </Menu.Item>
-      )}
-    </Menu>
+    <header className="app-header">
+      <BrandMark compact />
+      <div className="app-header__actions">
+        {promptEvent && !isAppInstalled && (
+          <button type="button" className="app-header__install" onClick={installApp}>
+            Install App
+          </button>
+        )}
+      </div>
+    </header>
   );
 };
 

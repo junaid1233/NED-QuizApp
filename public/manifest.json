@@ -1,7 +1,7 @@
 {
-  "short_name": "QuizApp",
-  "name": "QuizApp",
-  "description": "QuizApp is a free and open-source quiz application that lets you play fully customized quizzes right in the browser.",
+  "short_name": "NED MasterPrep",
+  "name": "NED MasterPrep — Master's Test Preparation",
+  "description": "Independent exam preparation platform for NED University Master's Admission Test candidates, especially Computer & Information Systems Engineering.",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -17,6 +17,6 @@
   "start_url": ".",
   "display": "standalone",
   "orientation": "any",
-  "theme_color": "#1B1C1D",
-  "background_color": "#D0D9DD"
+  "theme_color": "#1a56db",
+  "background_color": "#f8fafc"
 }
